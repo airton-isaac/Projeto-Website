@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   
 #  config.vm.provision "shell",inline: "apt-get update"
-  config.vm.network "private_network", ip: "192.168.50.4"
+#  config.vm.network "private_network", ip: "192.168.50.4"
   config.vm.network "forwarded_port", guest: 8000, host: 8000  # Linka a porta 5020 da MV com o computador local
   config.vm.provision "ansible_local" do |a|
     a.verbose  = true
